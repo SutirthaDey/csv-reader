@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>csv-reader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="operations">
+        <div><input type="button" value="read csv data"></div>
+        <div><input type="button" value="get all csv data"></div>
+        <div>
+            <input type="button" value="get all data in sorted manner">
+        </div>
+        <div>
+            <form method="POST">
+                <input type="text" name="isbn" id="isbn" placeholder="enter isbn" required>
+                <br>
+                <input type="submit" name="submit" value="search by isbn">
+            </form>
+        </div>
+        <div>
+            <form method="POST">
+                <input type="text" name="author" id="author" placeholder="enter author" required>
+                <br>
+                <input type="submit" name="submit" value="search by author">
+            </form>
+        </div>
+    </div>
+    <div id="add-book-magazine">
+        <div>
+        <form method="POST" id="book-form">
+            <input type="textbox" name="title" id="b-title" placeholder="enter title" required>
+            <br>
+            <input type="textbox" name="isbn" id="b-isbn" placeholder="enter isbn" required>
+            <br>
+            <input type="textbox" name="authors" id="b-author" placeholder="enter authors" required>
+            <br>
+            <input type="textbox" name="description" id="description" placeholder="enter description" required>
+            <br>
+            <input type="submit" name="submit" value="Add Book">
+        </form>
+       </div>
+       <div>
+        <form method="POST" id="magazine-form">
+            <input type="textbox" name="title" id="m-title" placeholder="enter title" required>
+            <br>
+            <input type="textbox" name="isbn" id="m-isbn" placeholder="enter isbn" required>
+            <br>
+            <input type="textbox" name="authors" id="m-author" placeholder="enter authors" required>
+            <br>
+            <input type="date" name="publishedAt" id="publishedAt" placeholder="enter publishedAt" required>
+            <br>
+            <input type="submit" name="submit" value="Add Magazine">
+        </form>
+       </div>
+    </div>
+    <div id="result">
+        <table id="result-table">
+            <thead>
+             <tr>
+                <th>Title</th>
+                <th>ISBN</th>
+                <th>Authors</th>
+                <th>Description</th>
+                <th>PublishedAt</th>
+             </tr>
+            </thead>
+            <tbody id="table-body">
+             <!-- <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>
+                    <p>Mexico dffdf</p>
+                    <p>Mexico</p>
+                </td>
+                <td>NA</td>
+                <td>PublishedAt</td>
+             </tr>         -->
+            </tbody>
+        </table>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./index.js"></script>
+</body>
+</html>

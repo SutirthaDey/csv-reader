@@ -1,0 +1,42 @@
+#operations{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#add-book-magazine{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#operatinss div{
+    border: 1px solid black;
+}
+
+#result{
+    margin: 100px auto;
+    width: 60vw;
+    min-height: 400px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: aliceblue;
+  }
+  
+td, th {
+    border: 1px solid #5a5757;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+ul {
+ text-align: center;
+}
