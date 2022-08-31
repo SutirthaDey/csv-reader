@@ -20,6 +20,9 @@ Author.belongsToMany(Magazine, {through: MagazineDetails});
 Magazine.belongsToMany(Author, {through: MagazineDetails});
 
 app.use(csvOperationsRoute);
+app.get('/',(req,res,next)=>{
+   res.sendFile(path.join(__dirname,'public','index.html'));
+})
 
 async function runServer(){
    await sequelize.sync();
