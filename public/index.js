@@ -83,12 +83,12 @@ function populateByAuthor(result){
 
 operations.addEventListener('click',async(e)=>{
     if(e.target.value === "read csv data"){
-        const response = await axios.get('http://34.223.227.182 :3000/readData');
+        const response = await axios.get('http://34.223.227.182:3000/readData');
         alert('successful!');
     }
     else if(e.target.value === "get all csv data"){
         try{
-            const response = await axios.get('http://34.223.227.182 :3000/getAllDetails');
+            const response = await axios.get('http://34.223.227.182:3000/getAllDetails');
             populateAllData(response.data);
         }
         catch(e)
@@ -98,7 +98,7 @@ operations.addEventListener('click',async(e)=>{
     }
     else if(e.target.value === 'get all data in sorted manner'){
         try{
-            const response = await axios.get('http://34.223.227.182 :3000/getSorted');
+            const response = await axios.get('http://34.223.227.182:3000/getSorted');
             populateSortedData(response.data)
         }
         catch(e)
@@ -112,7 +112,7 @@ searchByIsbn.addEventListener('submit',async(e)=>{
     try{
         e.preventDefault();
         const isbn = e.target.isbn.value;
-        const response = await axios.get(`http://34.223.227.182 :3000/findByIsbn?isbn=${isbn}`);
+        const response = await axios.get(`http://34.223.227.182:3000/findByIsbn?isbn=${isbn}`);
         populateByIsbn(response.data);
     }
     catch(e)
@@ -125,7 +125,7 @@ searchByAuthor.addEventListener('submit',async(e)=>{
     try{
         e.preventDefault();
         const author = e.target.author.value;
-        const response = await axios.get(`http://34.223.227.182 :3000/findByAuthor?author=${author}`);
+        const response = await axios.get(`http://34.223.227.182:3000/findByAuthor?author=${author}`);
         populateByAuthor(response.data);
     }
     catch(e)
@@ -145,7 +145,7 @@ addBookMagazine.addEventListener('submit',async(e)=>{
                 description: e.target.description.value
             }
 
-            await axios.post('http://34.223.227.182 :3000/addBook',bookData);
+            await axios.post('http://34.223.227.182:3000/addBook',bookData);
             alert('book added!');
         }
         else{
@@ -156,7 +156,7 @@ addBookMagazine.addEventListener('submit',async(e)=>{
                 publishedAt: e.target.publishedAt.value
             }
 
-            await axios.post('http://34.223.227.182 :3000/addMagazine',magazineData);
+            await axios.post('http://34.223.227.182:3000/addMagazine',magazineData);
             alert('magazine added!');
         }
     }
